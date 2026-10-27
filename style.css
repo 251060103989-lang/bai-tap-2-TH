@@ -179,3 +179,152 @@ a:hover {
 .student-table .avg-row td {
     border-top: 2px solid #ffebaba0;
 }
+/* ================= BÀI 3: CSS FORM ĐĂNG KÝ ================= */
+
+/* Thiết kế form nằm giữa trang & position: relative cho nhãn */
+.form-wrapper {
+    position: relative; /* position: relative cho khung form */
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto; /* Căn giữa form theo chiều ngang */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px; /* border-radius bo góc */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+/* Nhãn "ĐĂNG KÝ MỚI" ở góc trên bên phải form */
+.form-badge {
+    position: absolute; /* position: absolute cho nhãn */
+    top: -12px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+/* Bố trí Flexbox cho nhóm các ô nhập liệu */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Họ tên và Email nằm trên cùng một hàng bằng Flexbox */
+.form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1; /* Chiều rộng thống nhất cho các cột */
+}
+
+/* Khi màn hình nhỏ (mobile), tự động xuống hàng */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* Thiết lập màu nền, viền, khoảng cách & chiều rộng thống nhất cho các trường nhập liệu */
+.student-form input[type="text"],
+.student-form input[type="email"],
+.student-form select {
+    width: 100%; /* Chiều rộng thống nhất */
+    padding: 10px 12px; /* Khoảng cách padding */
+    border: 1px solid #ccc; /* Viền */
+    background-color: #f9f9f9; /* Màu nền */
+    border-radius: 6px; /* Bo góc border-radius */
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* :focus - Thay đổi màu viền khi chọn vào ô nhập liệu */
+.student-form input[type="text"]:focus,
+.student-form input[type="email"]:focus,
+.student-form select:focus {
+    outline: none;
+    border-color: #2575fc; /* Đổi màu viền khi focus */
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.3);
+}
+
+/* Radio và Checkbox được sắp xếp theo hàng ngang bằng Flexbox */
+.inline-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các mục ngang */
+    align-items: center;
+    padding-top: 4px;
+}
+
+.inline-group label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Các nút ở cuối form được căn chỉnh bằng Flexbox */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Căn lề phải cho các nút */
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Styling chung cho nút */
+.btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px; /* Bo góc */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+}
+
+.btn-primary {
+    background-color: #2575fc;
+    color: white;
+}
+
+/* :hover - Thay đổi giao diện nút Đăng ký khi di chuột */
+.btn-primary:hover {
+    background-color: #1a5bb8; /* Đổi màu nền nút khi hover */
+    box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+    transform: translateY(-1px);
+}
