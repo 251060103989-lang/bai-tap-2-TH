@@ -55,3 +55,61 @@
             </tfoot>
         </table>
     </div>
+<!-- ================= BÀI 3: FORM ĐĂNG KÝ SINH VIÊN ================= -->
+    <!-- Khung chứa Form với vị trí tương đối (position: relative) -->
+    <div class="form-wrapper">
+        <!-- Nhãn "ĐĂNG KÝ MỚI" ở góc trên bên phải form -->
+        <span class="form-badge">ĐĂNG KÝ MỚI</span>
+
+        <h2>Form Đăng Ký Sinh Viên</h2>
+
+        <form class="student-form">
+            <!-- Họ tên và Email nằm trên cùng một hàng khi màn hình đủ rộng -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullname">Họ và Tên</label>
+                    <input type="text" id="fullname" placeholder="Nhập họ và tên">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Nhập địa chỉ email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="major">Chuyên ngành</label>
+                <select id="major">
+                    <option value="">-- Chọn chuyên ngành --</option>
+                    <option value="web">Lập trình Web</option>
+                    <option value="mobile">Lập trình Mobile</option>
+                    <option value="data">Khoa học dữ liệu</option>
+                </select>
+            </div>
+
+            <!-- Radio được sắp xếp theo hàng ngang -->
+            <div class="form-group">
+                <label>Giới tính</label>
+                <div class="inline-group">
+                    <label><input type="radio" name="gender" value="male"> Nam</label>
+                    <label><input type="radio" name="gender" value="female"> Nữ</label>
+                    <label><input type="radio" name="gender" value="other"> Khác</label>
+                </div>
+            </div>
+
+            <!-- Checkbox được sắp xếp theo hàng ngang -->
+            <div class="form-group">
+                <label>Sở thích</label>
+                <div class="inline-group">
+                    <label><input type="checkbox" name="hobby" value="code"> Code</label>
+                    <label><input type="checkbox" name="hobby" value="music"> Nghe nhạc</label>
+                    <label><input type="checkbox" name="hobby" value="sports"> Thể thao</label>
+                </div>
+            </div>
+
+            <!-- Các nút ở cuối form được căn chỉnh bằng Flexbox -->
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Làm lại</button>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </div>
+        </form>
+    </div>
