@@ -1,0 +1,99 @@
+/* --- Thiết lập chung & Font, Text, Color --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* font-family */
+    background-color: #f4f7f6; /* background-color */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6; /* line-height */
+    letter-spacing: 0.5px; /* letter-spacing */
+}
+
+/* Group Selector (h1, h2): Định dạng chung các tiêu đề */
+h1, h2 {
+    text-align: center; /* text-align */
+    font-size: 24px; /* font-size */
+    font-weight: bold; /* font-weight */
+    margin-bottom: 10px;
+}
+
+/* Sử dụng background-image/linear-gradient cho phần tiêu đề */
+.header-banner {
+    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.header-banner h1, .header-banner h2 {
+    margin: 5px 0;
+}
+
+/* --- Box Model và Background --- */
+/* Class Selector (.profile): Định dạng khung thông tin (Profile Card) */
+.profile {
+    width: 400px; /* width */
+    margin: 30px auto; /* margin */
+    padding: 25px; /* padding */
+    border: 1px solid #e0e0e0; /* border */
+    border-radius: 15px; /* border-radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* box-shadow */
+    background-color: #ffffff; /* background-color */
+    text-align: center;
+}
+
+/* ID Selector (#avatar): Định dạng ảnh đại diện dạng hình tròn */
+#avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Dạng hình tròn */
+    object-fit: cover;
+    border: 3px solid #2575fc;
+    margin-bottom: 15px;
+}
+
+/* Descendant Selector (.profile p): Định dạng đoạn văn trong khung */
+.profile p {
+    font-style: italic; /* font-style */
+    font-size: 15px;
+    margin: 8px 0;
+    text-align: left;
+}
+
+/* Element Selector (p, h1): Định dạng thêm cho các đoạn văn và tiêu đề */
+p {
+    color: #333333;
+}
+
+/* Định dạng liên kết & Pseudo-class (a:hover) */
+a {
+    text-decoration: none; /* Bỏ gạch chân liên kết */
+    color: #2575fc;
+    font-weight: bold;
+}
+
+/* Pseudo-class: Đổi màu khi di chuột vào liên kết */
+a:hover {
+    color: #ff4757;
+    text-decoration: underline;
+}
+
+/* --- CSS List --- */
+.hobby-list {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Điều chỉnh khoảng cách giữa các mục sở thích */
+.hobby-list li {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Khi di chuột vào từng mục sở thích, màu nền thay đổi */
+.hobby-list li:hover {
+    background-color: #e8f4fe;
+    cursor: pointer;
+}
