@@ -1,0 +1,57 @@
+<!-- ================= BÀI 2: BẢNG ĐIỂM SINH VIÊN ================= -->
+    <!-- Khung chứa bảng điểm với vị trí tương đối (position: relative) -->
+    <div class="table-container">
+        <!-- Nhãn "BẢNG ĐIỂM" ở góc trên bên phải khung chứa -->
+        <span class="table-badge">BẢNG ĐIỂM</span>
+
+        <h2>Bảng Điểm Sinh Viên</h2>
+
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th class="col-stt">STT</th>
+                    <th>Mã Sinh Viên</th>
+                    <th>Họ và Tên</th>
+                    <th>Môn Học</th>
+                    <th class="col-score">Điểm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-stt">1</td>
+                    <td>SV001</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Lập trình Web</td>
+                    <td class="col-score">8.5</td>
+                </tr>
+                <tr>
+                    <td class="col-stt">2</td>
+                    <td>SV002</td>
+                    <td>Trần Thị B</td>
+                    <td>Cơ sở dữ liệu</td>
+                    <td class="col-score">9.0</td>
+                </tr>
+                <tr>
+                    <td class="col-stt">3</td>
+                    <td>SV003</td>
+                    <td>Lê Văn C</td>
+                    <td>Mạng máy tính</td>
+                    <td class="col-score">7.5</td>
+                </tr>
+                <tr>
+                    <td class="col-stt">4</td>
+                    <td>SV004</td>
+                    <td>Phạm Thị D</td>
+                    <td>Cấu trúc dữ liệu</td>
+                    <td class="col-score">8.0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- Dòng Điểm trung bình in đậm và có màu nền riêng -->
+                <tr class="avg-row">
+                    <td colspan="4">Điểm trung bình tích lũy</td>
+                    <td class="col-score">8.25</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
