@@ -3,45 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin cá nhân & Danh sách sở thích</title>
+    <title>Bài Tập CSS: Bài 1, Bài 2 & Bài 3</title>
     
-    <!-- 1. External CSS: Liên kết tệp style.css -->
+    <!-- External CSS: Tệp style.css dùng chung -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- 2. Internal CSS: Sử dụng thẻ <style> -->
+    <!-- Internal CSS (Yêu cầu Bài 1) -->
     <style>
-        /* Định dạng tiêu đề bằng thẻ <style> */
-        h1, h2 {
+        /* Định dạng tiêu đề và danh sách bài 1 bằng thẻ <style> */
+        .profile h1, .profile h2 {
             font-family: Arial, sans-serif;
         }
         
-        /* Định dạng danh sách sở thích bằng thẻ <style> */
         .hobby-list {
-            list-style-type: square; /* Thay đổi kiểu dấu đầu dòng */
+            list-style-type: square;
             padding-left: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Khung thông tin (.profile) -->
+    <!-- ================= BÀI 1: THÔNG TIN CÁ NHÂN & SỞ THÍCH ================= -->
     <div class="profile">
-        <!-- Ảnh đại diện dạng hình tròn với ID #avatar -->
         <img id="avatar" src="https://via.placeholder.com/120" alt="Ảnh đại diện">
 
-        <!-- Tiêu đề h1 & h2 -->
         <div class="header-banner">
             <h1>THÔNG TIN CÁ NHÂN</h1>
             <h2>Lập trình viên Web</h2>
         </div>
 
-        <!-- Inline CSS: Thay đổi màu sắc của họ tên bằng 3 cách khai báo màu khác nhau (màu tên, HEX, RGB/RGBA) -->
-        <p>Họ và tên: <strong style="color: blue;">Nguyễn Văn A</strong></p> <!-- Tên màu -->
+        <!-- Inline CSS (3 kiểu màu) -->
+        <p>Họ và tên: <strong style="color: blue;">Nguyễn Văn A</strong></p>
         <p>Email: <a href="mailto:nguyenvana@example.com">nguyenvana@example.com</a></p>
-        <p>Giới thiệu: <span style="color: #2c3e50;">Tôi là sinh viên yêu thích lập trình web.</span></p> <!-- HEX -->
-        <p>Trạng thái: <span style="color: rgba(46, 204, 113, 1);">Đang học tập</span></p> <!-- RGBA -->
+        <p>Giới thiệu: <span style="color: #2c3e50;">Tôi là sinh viên yêu thích lập trình web.</span></p>
+        <p>Trạng thái: <span style="color: rgba(46, 204, 113, 1);">Đang học tập</span></p>
 
-        <!-- Danh sách sở thích -->
         <h2>Danh sách sở thích</h2>
         <ul class="hobby-list">
             <li>Đọc sách công nghệ</li>
@@ -49,6 +45,114 @@
             <li>Nghe nhạc thư giãn</li>
             <li>Chơi bóng đá</li>
         </ul>
+    </div>
+
+    <!-- ================= BÀI 2: BẢNG ĐIỂM SINH VIÊN ================= -->
+    <div class="table-container">
+        <span class="table-badge">BẢNG ĐIỂM</span>
+
+        <h2>Bảng Điểm Sinh Viên</h2>
+
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th class="col-stt">STT</th>
+                    <th>Mã Sinh Viên</th>
+                    <th>Họ và Tên</th>
+                    <th>Môn Học</th>
+                    <th class="col-score">Điểm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-stt">1</td>
+                    <td>SV001</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Lập trình Web</td>
+                    <td class="col-score">8.5</td>
+                </tr>
+                <tr>
+                    <td class="col-stt">2</td>
+                    <td>SV002</td>
+                    <td>Trần Thị B</td>
+                    <td>Cơ sở dữ liệu</td>
+                    <td class="col-score">9.0</td>
+                </tr>
+                <tr>
+                    <td class="col-stt">3</td>
+                    <td>SV003</td>
+                    <td>Lê Văn C</td>
+                    <td>Mạng máy tính</td>
+                    <td class="col-score">7.5</td>
+                </tr>
+                <tr>
+                    <td class="col-stt">4</td>
+                    <td>SV004</td>
+                    <td>Phạm Thị D</td>
+                    <td>Cấu trúc dữ liệu</td>
+                    <td class="col-score">8.0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="avg-row">
+                    <td colspan="4">Điểm trung bình tích lũy</td>
+                    <td class="col-score">8.25</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- ================= BÀI 3: FORM ĐĂNG KÝ SINH VIÊN ================= -->
+    <div class="form-wrapper">
+        <span class="form-badge">ĐĂNG KÝ MỚI</span>
+
+        <h2>Form Đăng Ký Sinh Viên</h2>
+
+        <form class="student-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fullname">Họ và Tên</label>
+                    <input type="text" id="fullname" placeholder="Nhập họ và tên">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Nhập địa chỉ email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="major">Chuyên ngành</label>
+                <select id="major">
+                    <option value="">-- Chọn chuyên ngành --</option>
+                    <option value="web">Lập trình Web</option>
+                    <option value="mobile">Lập trình Mobile</option>
+                    <option value="data">Khoa học dữ liệu</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Giới tính</label>
+                <div class="inline-group">
+                    <label><input type="radio" name="gender" value="male"> Nam</label>
+                    <label><input type="radio" name="gender" value="female"> Nữ</label>
+                    <label><input type="radio" name="gender" value="other"> Khác</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Sở thích</label>
+                <div class="inline-group">
+                    <label><input type="checkbox" name="hobby" value="code"> Code</label>
+                    <label><input type="checkbox" name="hobby" value="music"> Nghe nhạc</label>
+                    <label><input type="checkbox" name="hobby" value="sports"> Thể thao</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">Làm lại</button>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </div>
+        </form>
     </div>
 
 </body>
