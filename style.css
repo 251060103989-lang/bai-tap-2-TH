@@ -97,3 +97,85 @@ a:hover {
     background-color: #e8f4fe;
     cursor: pointer;
 }
+/* ================= BÀI 2: CSS BẢNG ĐIỂM ================= */
+
+/* Khung chứa bảng với position: relative và giới hạn chiều rộng */
+.table-container {
+    position: relative; /* position: relative cho khung chứa bảng */
+    width: 90%; /* Thiết lập chiều rộng bằng % */
+    max-width: 800px; /* max-width để giới hạn chiều rộng bảng */
+    margin: 40px auto; /* margin: auto để căn giữa bảng */
+    padding: 1.5rem; /* Sử dụng đơn vị rem */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Nhãn "BẢNG ĐIỂM" ở góc trên bên phải khung chứa */
+.table-badge {
+    position: absolute; /* position: absolute cho nhãn */
+    top: -12px; /* Dùng top để điều chỉnh vị trí */
+    right: 20px; /* Dùng right để điều chỉnh vị trí */
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 16px; /* Dùng px */
+    font-size: 0.85rem; /* Dùng rem */
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+/* Định dạng Bảng */
+.student-table {
+    width: 100%; /* Chiều rộng bảng 100% theo khung chứa */
+    border-collapse: collapse; /* border-collapse: collapse */
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* Thiết lập padding cho các ô th và td */
+.student-table th, 
+.student-table td {
+    padding: 12px 15px; /* padding cho các ô */
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+/* Căn giữa nội dung cột STT và Điểm */
+.student-table .col-stt,
+.student-table .col-score {
+    text-align: center;
+}
+
+/* Dòng tiêu đề có màu nền khác với các dòng dữ liệu */
+.student-table thead tr {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+/* Các dòng chẵn và lẻ có màu nền xen kẽ bằng :nth-child() */
+.student-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.student-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Dòng được di chuột vào thay đổi màu nền bằng :hover */
+.student-table tbody tr:hover {
+    background-color: #e1f5fe;
+    transition: background-color 0.2s ease;
+}
+
+/* Dòng Điểm trung bình được in đậm và có màu nền riêng */
+.student-table .avg-row {
+    font-weight: bold; /* In đậm */
+    background-color: #fff3cd; /* Màu nền riêng */
+    color: #856404;
+}
+
+.student-table .avg-row td {
+    border-top: 2px solid #ffebaba0;
+}
